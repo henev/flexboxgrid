@@ -1,8 +1,10 @@
 @mixin col {
     flex: 0 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: $padding;
+    padding-left: $padding;
 }
+
+$padding: 15px;
 
 $width-1: 8.333%;
 $width-2: 16.667%;
@@ -43,12 +45,26 @@ $width-12: 100%;
 @mixin col-offset-10 { margin-left: $width-10; }
 @mixin col-offset-11 { margin-left: $width-11; }
 
+.container {
+    padding-right: $padding;
+    padding-left: $padding;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fluid {
+    padding-right: $padding;
+    padding-left: $padding;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -$padding;
+    margin-left: -$padding;
     
     &--no-margin {
         margin-right: 0;
